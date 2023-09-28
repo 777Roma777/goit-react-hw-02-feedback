@@ -32,12 +32,12 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
     const positivePercentage = this.countPositiveFeedbackPercentage();
-    const objectKey = Object.keys(this.state);
+    const options = Object.keys(this.state);
     return (
-      <div class="container">
+      <div className="container">
         <Section title="Please leave feedback">
           <FeedBack
-            options={objectKey}
+            options={options}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
